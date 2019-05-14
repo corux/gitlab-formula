@@ -133,8 +133,8 @@ gitlab-ldap-config:
     - filename: {{ gitlab.config_file }}
     - text: |
       "
-      ldap:
-        enabled: True
+      ldap
+        enabled True
       "
     require_in:
       - file: gitlab-config
