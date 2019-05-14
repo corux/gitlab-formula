@@ -126,7 +126,7 @@ gitlab-config-{{ section }}-{{ key }}:
 {% endfor %}
 {% endfor %}
 
-{% if gitlab.ldap %}
+{% if gitlab.ldap is defined %}
 gitlab-ldap-config:
   file.accumulated:
     - name: gitlab-config-accumulator
