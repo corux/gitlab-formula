@@ -131,8 +131,7 @@ gitlab-ldap-config:
   file.accumulated:
     - name: gitlab-config-accumulator
     - filename: {{ gitlab.config_file }}
-    - text: |
-      'ff'
+    - text: 'ff'
     require_in:
       - file: gitlab-config
 {% endif %}
