@@ -141,4 +141,5 @@ gitlab-reconfigure:
     - onchanges:
       - file: gitlab-config
       - file: gitlab-url
+      - file: mattermost-url
 
