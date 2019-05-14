@@ -132,7 +132,8 @@ gitlab-ldap-config:
     - name: gitlab-config-accumulator
     - filename: {{ gitlab.config_file }}
     - text: |
-      {{ gitlab.ldap }}
+      ldap:
+        enabled: True
     require_in:
       - file: gitlab-config
 {% endif %}
