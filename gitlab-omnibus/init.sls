@@ -126,6 +126,13 @@ gitlab-config-{{ section }}-{{ key }}:
 {% endfor %}
 {% endfor %}
 
+gitlab-ldap-config:
+  file.accumulated:
+    - name: gitlab-config-accumulator
+    - filename: {{ gitlab.config_file }}
+    - text: 'ff'
+    require_in:
+      - file: gitlab-config
 
 gitlab-upgrade:
   cmd.run:
